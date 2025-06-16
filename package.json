@@ -6,9 +6,6 @@
     "dev": "nodemon index.js",
     "start": "node index.js"
   },
-    "overrides": {
-  "node-pty": "0.11.0"
-},
   "keywords": [],
   "author": "",
   "license": "ISC",
