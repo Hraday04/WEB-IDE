@@ -3,5 +3,5 @@ services:
     name: web-ide
     runtime: node
     buildCommand: npm install
-    startCommand: npm start
+    startCommand: node /server/index.js
     plan: free
