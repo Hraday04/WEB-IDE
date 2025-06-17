@@ -29,8 +29,6 @@ const io = new SocketServer({
 })
 
 app.use(cors())
-
-app.use(express.static(path.join(__dirname, "..", "client", "dist")));
 // app.use(express.static("public")); 
 
 // app.get("/", (req, res) => {
@@ -62,10 +60,6 @@ io.on('connection', (socket) => {
     })
 
 })
-
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "client", "dist", "index.html"));
-});
 
 app.get('/files', async (req, res) => {
     const fileTree = await generateFileTree('./user');
