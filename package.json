@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "postinstall": "npm install --prefix client",
-    "build-client": "npm run build --prefix client",
-    "server": "node server/index.js"
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "node server/index.js",
+    "client": "npm --prefix client run dev"
   },
   "keywords": [],
   "author": "",
