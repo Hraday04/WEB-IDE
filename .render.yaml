@@ -2,6 +2,6 @@ services:
   - type: web
     name: web-ide
     runtime: node
-    buildCommand: npm install && npm --prefix client install
-    startCommand: npm run dev
+    buildCommand: npm run postinstall && npm run build-client
+    startCommand: npm start
     plan: free
