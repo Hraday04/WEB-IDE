@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "server": "node server/index.js",
-    "client": "npm --prefix client run dev"
+    "client": "npm --prefix client run dev",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
