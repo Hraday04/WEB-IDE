@@ -7,7 +7,7 @@ const cors = require('cors')
 const chokidar = require('chokidar');
 
 const pty = require('node-pty')
-
+const port = process.env.PORT || 4000; 
 
 const cwdPath = path.join(process.env.INIT_CWD || process.cwd(), 'user');
 
@@ -99,3 +99,6 @@ async function generateFileTree(directory) {
     await buildTree(directory, tree);
     return tree
 }
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`);
+});
