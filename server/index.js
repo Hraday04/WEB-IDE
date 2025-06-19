@@ -1,7 +1,7 @@
 const http = require('http')
 const express = require('express')
 const fs = require('fs/promises')
-const { Server: SocketServer } = require('socket.io')
+const { Server } = require('socket.io')
 const path = require('path')
 const cors = require('cors')
 const chokidar = require('chokidar');
