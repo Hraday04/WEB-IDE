@@ -24,9 +24,16 @@ const ptyProcess = pty.spawn('bash', [], {
 
 const app = express()
 const server = http.createServer(app);
-const io = new SocketServer({
-    cors: '*'
-})
+// const io = new SocketServer({
+//     cors: '*'
+// })
+
+const io = new Server(server, {
+  cors: {
+    origin: "https://web-ide-amber.vercel.app/", 
+    methods: ["GET", "POST"],
+  },
+});
 
 app.use(cors(
     
