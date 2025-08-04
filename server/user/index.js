@@ -1,18 +1,12 @@
-const express = require('express')
+const express = require("express");
+const multer = require("multer");
+const path = require("path");
 
-const PORT = 3300
+const app = express();
+const upload = multer({ dest: "uploads/" });
 
-const app = express()
+app.use(express.static("public"));
 
-app.get('/', (req, res) => res.send('Hello from my own server' ));
+app.post("/upload", upload.single("file"), (req, res) => res.send("Uploaded"));
 
-
-app.listen(PORT, () => console.log(`Server Started on port ${PORT}`))
-
-
-
-
-
-
-
-                                    
+app.listen(3000, () => console.log("http://localhost:3000"));

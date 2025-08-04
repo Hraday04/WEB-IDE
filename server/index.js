@@ -10,7 +10,6 @@ const pty = require("node-pty");
 
 const userDir = path.resolve(__dirname, "user");
 
-
 const ptyProcess = pty.spawn("bash", [], {
   name: "xterm-color",
   cols: 80,

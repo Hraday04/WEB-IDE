@@ -48,7 +48,7 @@ const Terminal = () => {
     term.open(terminalRef.current);
 
     term.onData((data) => {
-      socket.emit("terminal:write", data);
+      socket.emit("terminal:write",data);
     });
 
     function onTerminalData(data) {
